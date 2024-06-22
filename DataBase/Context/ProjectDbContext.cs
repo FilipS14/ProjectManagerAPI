@@ -15,7 +15,7 @@ namespace DataBase.Context
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Database=librarie;Username=postgres;Password=1q2w3e");
+            optionsBuilder.UseNpgsql("Host=localhost;Database=ProjectManager;Username=postgres;Password=1q2w3e");
         }
         public DbSet<UserEntity> Users { get; set; }
         public DbSet<Entities.ProjectEntity> Projects { get; set; }

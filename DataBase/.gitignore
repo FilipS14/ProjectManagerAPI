@@ -1,0 +1,66 @@
+# Visual Studio
+.vscode/
+.vs/
+*.user
+*.suo
+*.bak
+*.ncb
+*.log
+*.psess
+*.vsp
+*.pdb
+ipch/
+obj/
+bin/
+*.cache
+*.ilk
+*.dll
+*.exe
+*.plg
+*.tlb
+*.tlh
+*.tmp
+*.xml
+*.csproj.user
+.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Entity Framework
+*.mdf
+*.ldf
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# NPM Packages
+node_modules/
+
+# Yarn
+.yarn/
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# Windows Store app package directories and files
+AppPackages/
+BundleArtifacts/
+
+# Windows Store app symbol directories
+StoreMetadata/
+
+# JetBrains Rider
+.idea/

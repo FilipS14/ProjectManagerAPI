@@ -12,3 +12,4 @@ C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\DataBase\obj\D
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\DataBase\obj\Debug\net8.0\DataBase.pdb
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\DataBase\obj\Debug\net8.0\DataBase.genruntimeconfig.cache
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\DataBase\obj\Debug\net8.0\ref\DataBase.dll
+C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\DataBase\obj\Debug\net8.0\DataBase.sourcelink.json

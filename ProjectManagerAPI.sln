@@ -4,10 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6EEACDB9-A556-45C2-9C20-E1BEA6C0538C} = {6EEACDB9-A556-45C2-9C20-E1BEA6C0538C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{6EEACDB9-A556-45C2-9C20-E1BEA6C0538C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "DataBase\DataBase.csproj", "{B130B745-ED51-4D16-8988-4F43869FDC33}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6EEACDB9-A556-45C2-9C20-E1BEA6C0538C} = {6EEACDB9-A556-45C2-9C20-E1BEA6C0538C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
