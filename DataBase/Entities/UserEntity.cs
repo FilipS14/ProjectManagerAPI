@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace DataBase.Entities
 {
-    public class UserEntity
+    public class UserEntity : IdentityUser
     {
         public int Id { get; set; }
         public string Username { get; set; }

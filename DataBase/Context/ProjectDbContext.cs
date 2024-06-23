@@ -13,10 +13,12 @@ namespace DataBase.Context
         public ProjectDbContext(DbContextOptions<ProjectDbContext> options) : base(options)
         {
         }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql("Host=localhost;Database=ProjectManager;Username=postgres;Password=1q2w3e");
         }
+        
         public DbSet<UserEntity> Users { get; set; }
         public DbSet<ProjectEntity> Projects { get; set; }
         public DbSet<TaskEntity> Tasks { get; set; }

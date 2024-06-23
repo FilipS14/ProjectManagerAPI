@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6EEACDB9-A556-45C2-9C20-E1BEA6C0538C}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EEACDB9-A556-45C2-9C20-E1BEA6C0538C}|Core\\Core.csproj|solutionrelative:core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|solutionrelative:api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\database\\context\\projectdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|solutionrelative:database\\context\\projectdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|solutionrelative:api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\database\\context\\projectdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|solutionrelative:database\\context\\projectdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +42,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\appsettings.json",
-              "RelativeDocumentMoniker": "API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\appsettings.json",
-              "RelativeToolTip": "API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-22T22:32:27.542Z",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "API\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "API\\Controllers",
+              "WhenOpened": "2024-06-23T10:45:15.068Z",
               "EditorCaption": ""
             },
             {
@@ -53,35 +62,62 @@
               "RelativeDocumentMoniker": "DataBase\\Context\\ProjectDbContext.cs",
               "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\DataBase\\Context\\ProjectDbContext.cs",
               "RelativeToolTip": "DataBase\\Context\\ProjectDbContext.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwEMAAAAAAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAoAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T22:32:22.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Startup.cs",
-              "RelativeDocumentMoniker": "API\\Startup.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Startup.cs",
-              "RelativeToolTip": "API\\Startup.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAowB0AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T22:30:12.725Z",
+              "WhenOpened": "2024-06-23T10:20:04.459Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Core\\Services\\UserService.cs",
+              "ToolTip": "Core/Services/UserService.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAEwHMAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Core\\Services",
+              "OverriddenToolTip": "Core/Services/UserService.cs",
+              "WhenOpened": "2024-06-23T09:30:04.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-23T09:26:35.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Startup.cs",
+              "RelativeDocumentMoniker": "API\\Startup.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Startup.cs",
+              "RelativeToolTip": "API\\Startup.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAuwBoAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T09:25:29.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Program.cs",
               "RelativeDocumentMoniker": "API\\Program.cs",
               "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Program.cs",
               "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAhAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T20:52:13.816Z",
+              "WhenOpened": "2024-06-23T09:25:04.608Z",
               "EditorCaption": ""
             }
           ]

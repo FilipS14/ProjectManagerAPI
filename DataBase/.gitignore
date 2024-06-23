@@ -23,6 +23,7 @@ bin/
 *.xml
 *.csproj.user
 .vscode/
+.FileContextIndex/
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
