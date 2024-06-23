@@ -18,8 +18,8 @@ namespace DataBase.Context
             optionsBuilder.UseNpgsql("Host=localhost;Database=ProjectManager;Username=postgres;Password=1q2w3e");
         }
         public DbSet<UserEntity> Users { get; set; }
-        public DbSet<Entities.ProjectEntity> Projects { get; set; }
-        public DbSet<Entities.TaskEntity> Tasks { get; set; }
+        public DbSet<ProjectEntity> Projects { get; set; }
+        public DbSet<TaskEntity> Tasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,7 +34,7 @@ namespace DataBase.Context
                 entity.Property(e => e.FullName).IsRequired().HasMaxLength(100);
             });
 
-            modelBuilder.Entity<Entities.ProjectEntity>(entity =>
+            modelBuilder.Entity<ProjectEntity>(entity =>
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
@@ -46,7 +46,7 @@ namespace DataBase.Context
                     .HasForeignKey(e => e.UserId);
             });
 
-            modelBuilder.Entity<Entities.TaskEntity>(entity =>
+            modelBuilder.Entity<TaskEntity>(entity =>
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(100);

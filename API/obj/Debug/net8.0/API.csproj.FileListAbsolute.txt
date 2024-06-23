@@ -146,3 +146,4 @@ C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\bin\Debug\
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\bin\Debug\net8.0\DataBase.dll
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\bin\Debug\net8.0\Core.pdb
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\bin\Debug\net8.0\DataBase.pdb
+C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Api\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
