@@ -2,6 +2,7 @@
 using DataBase.Context;
 using DataBase.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
@@ -22,7 +23,6 @@ namespace API.Controllers
             try
             {
                 await _userService.Register(userDto);
-
                 return Ok(new { message = "Registration successful" });
             }
             catch (Exception ex)

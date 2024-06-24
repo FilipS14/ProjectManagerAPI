@@ -15,6 +15,7 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using DataBase.Entities;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace API
 {
@@ -43,14 +44,11 @@ namespace API
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
-                    ValidateAudience = false
+                    ValidateAudience = false,
+                    RoleClaimType = ClaimTypes.Role
                 };
             });
-
-            services.AddIdentity<UserEntity, IdentityRole>()
-                    .AddEntityFrameworkStores<ProjectDbContext>()
-                    .AddDefaultTokenProviders();
-
+            
             services.AddScoped<IUserService, UserService>();
 
             services.AddControllers();

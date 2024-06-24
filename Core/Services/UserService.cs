@@ -16,6 +16,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Project.Database.Repositories;
+using Utils.Enums;
 
 namespace Core.Services
 {
@@ -92,6 +93,32 @@ namespace Core.Services
             return false;
         }
 
+        private bool IsEmailValid(string email)
+        {
+            var emailRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+            return Regex.IsMatch(email, emailRegex);
+        }
+
+        private bool IsPassWordValid(string password)
+        {
+            return password.Length >= 8;
+        }
+
+        private UserRole GetUserRoleFromString(string role)
+        {
+            try
+            {
+                Console.WriteLine("Getting Role Enum from Role String.\n");
+                return (UserRole)Enum.Parse(typeof(UserRole), role, true);
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("Getting Role Enum from Role String failed.\n");
+                throw new Exception($"The role '{role}' is not valid.");
+            }
+        }
+
+
         private bool IsUserValid(UserEntity user)
         {
             if (FirstCharacterIsLetter(user) == false)
@@ -106,50 +133,37 @@ namespace Core.Services
             }
             if (!IsPassWordValid(user.Password))
             {
-                Console.WriteLine("!PassWord invaild.");
+                Console.WriteLine("! PassWord invaild.");
                 return false;
             }
+            Console.WriteLine($"Checking if the user exists");
             if (UserExists(user))
             {
                 Console.WriteLine("! User invalid. This username / email is already taken.\n");
                 return false;
             }
+            Console.WriteLine($"Passed user existance");
 
             return true;
-        }
-
-        private bool IsEmailValid(string email)
-        {
-            var emailRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
-            return Regex.IsMatch(email, emailRegex);
-        }
-
-        private bool IsPassWordValid(string password)
-        {
-            return password.Length >= 8;
-        }
-
-        private async void RegisterValidUser(UserEntity user)
-        {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
         }
 
         public async Task Register(UserDto userDto)
         {
             try
             {
+                Console.WriteLine("Entered Register in UserService\n");
                 var user = new UserEntity
                 {
                     Username = userDto.Username,
                     Email = userDto.Email,
                     FullName = userDto.FullName,
-                    Password = BCrypt.Net.BCrypt.HashPassword(userDto.Password)
+                    Password = BCrypt.Net.BCrypt.HashPassword(userDto.Password),
+                    Role = GetUserRoleFromString(userDto.Role)
                 };
-
                 if (IsUserValid(user)) 
                 {
-                    RegisterValidUser(user);
+                    _context.Users.Add(user);
+                    await _context.SaveChangesAsync();
                 }
                 else
                     throw new Exception($"User could not be registered. Check internal console for more information about the error.");
@@ -177,7 +191,8 @@ namespace Core.Services
                 Subject = new ClaimsIdentity(new Claim[]
                 {
                     new Claim(ClaimTypes.Name, user.Username),
-                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                    new Claim(ClaimTypes.Role, user.Role.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(int.Parse(_configuration["JwtSettings:DurationInMinutes"])),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),

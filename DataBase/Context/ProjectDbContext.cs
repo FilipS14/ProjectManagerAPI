@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utils.Enums;
 
 namespace DataBase.Context
 {
@@ -34,6 +35,12 @@ namespace DataBase.Context
                 entity.Property(e => e.Email).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.Password).IsRequired().HasMaxLength(255);
                 entity.Property(e => e.FullName).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.Role)
+                      .IsRequired()
+                      .HasMaxLength(50)
+                      .HasConversion(
+                          v => v.ToString(),
+                          v => (UserRole)Enum.Parse(typeof(UserRole), v));
             });
 
             modelBuilder.Entity<ProjectEntity>(entity =>
@@ -42,7 +49,6 @@ namespace DataBase.Context
                 entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.Description);
                 entity.Property(e => e.CreatedDate).IsRequired();
-
                 entity.HasOne(e => e.User)
                     .WithMany(u => u.Projects)
                     .HasForeignKey(e => e.UserId);
