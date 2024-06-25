@@ -16,6 +16,7 @@ using Microsoft.Extensions.Configuration;
 using DataBase.Entities;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace API
 {

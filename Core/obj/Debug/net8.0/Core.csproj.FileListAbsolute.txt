@@ -3,7 +3,9 @@ C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\bin\Debug
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\bin\Debug\net8.0\Core.dll
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\bin\Debug\net8.0\Core.pdb
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\bin\Debug\net8.0\DataBase.dll
+C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\bin\Debug\net8.0\Utils.dll
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\bin\Debug\net8.0\DataBase.pdb
+C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\bin\Debug\net8.0\Utils.pdb
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\obj\Debug\net8.0\Core.csproj.AssemblyReference.cache
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\obj\Debug\net8.0\Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\obj\Debug\net8.0\Core.AssemblyInfoInputs.cache
@@ -16,5 +18,3 @@ C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\obj\Debug
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\obj\Debug\net8.0\Core.pdb
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\obj\Debug\net8.0\Core.genruntimeconfig.cache
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\obj\Debug\net8.0\ref\Core.dll
-C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\bin\Debug\net8.0\Utils.dll
-C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Core\bin\Debug\net8.0\Utils.pdb

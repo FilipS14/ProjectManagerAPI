@@ -15,7 +15,7 @@ namespace DataBase.Entities
         public string Email { get; set; }
         public string Password { get; set; }
         public string FullName { get; set; }
-        public UserRole Role { get; set; }
+        public UserRole.UserRoleEnum Role { get; set; }
         
         public ICollection<ProjectEntity> Projects { get; set; }
         public ICollection<TaskEntity> Tasks { get; set; }

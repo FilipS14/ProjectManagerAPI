@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ElHBTrBuzAXxJD6iWBPySDwWWVnNVhZhYX5MnZ3ByroxPVpk46Oi+OeN1U7kd3RbOjE0ql1ZGRlIYvuzq6QcCQ==",
+  "dgSpecHash": "gfJDR7AJo8svJ3J4iyCBAdFAPIR2FMxECgLZTSOo9tcydJ2j9ddUQvysHvhoSJZxJSsqC7cAsZ1a88Hor5WkEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -62,6 +62,7 @@
     "C:\\Users\\Filip\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.4\\npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "C:\\Users\\Filip\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.6.2\\swashbuckle.aspnetcore.annotations.6.6.2.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "C:\\Users\\Filip\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",

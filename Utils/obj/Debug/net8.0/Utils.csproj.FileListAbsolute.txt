@@ -10,3 +10,4 @@ C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Utils\obj\Debu
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Utils\obj\Debug\net8.0\refint\Utils.dll
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Utils\obj\Debug\net8.0\Utils.pdb
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Utils\obj\Debug\net8.0\ref\Utils.dll
+C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\Utils\obj\Debug\net8.0\Utils.csproj.AssemblyReference.cache

@@ -40,7 +40,7 @@ namespace DataBase.Context
                       .HasMaxLength(50)
                       .HasConversion(
                           v => v.ToString(),
-                          v => (UserRole)Enum.Parse(typeof(UserRole), v));
+                          v => (UserRole.UserRoleEnum)Enum.Parse(typeof(UserRole.UserRoleEnum), v));
             });
 
             modelBuilder.Entity<ProjectEntity>(entity =>
@@ -51,7 +51,8 @@ namespace DataBase.Context
                 entity.Property(e => e.CreatedDate).IsRequired();
                 entity.HasOne(e => e.User)
                     .WithMany(u => u.Projects)
-                    .HasForeignKey(e => e.UserId);
+                    .HasForeignKey(e => e.UserId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<TaskEntity>(entity =>
@@ -63,11 +64,13 @@ namespace DataBase.Context
 
                 entity.HasOne(e => e.Project)
                     .WithMany(p => p.Tasks)
-                    .HasForeignKey(e => e.ProjectId);
+                    .HasForeignKey(e => e.ProjectId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
                 entity.HasOne(e => e.User)
                     .WithMany(u => u.Tasks)
-                    .HasForeignKey(e => e.UserId);
+                    .HasForeignKey(e => e.UserId)
+                    .OnDelete(DeleteBehavior.SetNull);
             });
         }
 

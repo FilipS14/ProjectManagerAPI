@@ -3,27 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\database\\context\\projectdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|solutionrelative:database\\context\\projectdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6EEACDB9-A556-45C2-9C20-E1BEA6C0538C}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EEACDB9-A556-45C2-9C20-E1BEA6C0538C}|Core\\Core.csproj|solutionrelative:core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\database\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|solutionrelative:database\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|solutionrelative:api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Filip\\AppData\\Local\\Temp\\.vsdbgsrc\\6c7e33e40efd3448fb875bc2f2d6e52db577302bb0b043df2ef0369343ec1b43\\UserService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|solutionrelative:api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\database\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -40,102 +25,49 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\UserController.cs",
+              "ToolTip": "API/Controllers/UserController.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAWwF4AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "API\\Controllers",
+              "OverriddenToolTip": "API/Controllers/UserController.cs",
+              "WhenOpened": "2024-06-25T10:54:37.724Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\AppData\\Local\\Temp\\.vsdbgsrc\\6c7e33e40efd3448fb875bc2f2d6e52db577302bb0b043df2ef0369343ec1b43\\UserService.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\6c7e33e40efd3448fb875bc2f2d6e52db577302bb0b043df2ef0369343ec1b43\\UserService.cs",
-              "ToolTip": "C:\\Users\\Filip\\AppData\\Local\\Temp\\.vsdbgsrc\\6c7e33e40efd3448fb875bc2f2d6e52db577302bb0b043df2ef0369343ec1b43\\UserService.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\6c7e33e40efd3448fb875bc2f2d6e52db577302bb0b043df2ef0369343ec1b43\\UserService.cs [Read Only]",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAnwJQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T23:42:24.148Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\DataBase\\Entities\\UserEntity.cs",
-              "RelativeDocumentMoniker": "DataBase\\Entities\\UserEntity.cs",
-              "ToolTip": "DataBase/Entities/UserEntity.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAsAAAA",
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\DataBase\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "DataBase\\Repositories\\UserRepository.cs",
+              "ToolTip": "DataBase/Repositories/UserRepository.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAmwDYAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "DataBase\\Entities",
-              "OverriddenToolTip": "DataBase/Entities/UserEntity.cs",
-              "WhenOpened": "2024-06-24T22:59:35.323Z",
+              "OverriddenGroupName": "DataBase\\Repositories",
+              "OverriddenToolTip": "DataBase/Repositories/UserRepository.cs",
+              "WhenOpened": "2024-06-25T10:30:45.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProjectDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\DataBase\\Context\\ProjectDbContext.cs",
-              "RelativeDocumentMoniker": "DataBase\\Context\\ProjectDbContext.cs",
-              "ToolTip": "DataBase/Context/ProjectDbContext.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAewAsAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "DataBase\\Context",
-              "OverriddenToolTip": "DataBase/Context/ProjectDbContext.cs",
-              "WhenOpened": "2024-06-24T22:48:32.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\UserController.cs",
-              "ToolTip": "API/Controllers/UserController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAwBYAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "API\\Controllers",
-              "OverriddenToolTip": "API/Controllers/UserController.cs",
-              "WhenOpened": "2024-06-24T22:24:21.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Startup.cs",
-              "RelativeDocumentMoniker": "API\\Startup.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Startup.cs",
-              "RelativeToolTip": "API\\Startup.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAUwDEAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T22:05:37.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\DataBase\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "DataBase\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\DataBase\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "DataBase\\Repositories\\UserRepository.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAowCwAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T22:01:49.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Core\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\UserService.cs*",
-              "RelativeToolTip": "Core\\Services\\UserService.cs*",
-              "ViewState": "AQIAAIsAAAAAAAAAAAAAwJMAAAAJAAAA",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\UserService.cs",
+              "RelativeToolTip": "Core\\Services\\UserService.cs",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAEwGQAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "OverriddenGroupName": "Core\\Services",
-              "WhenOpened": "2024-06-24T21:40:30.674Z",
+              "WhenOpened": "2024-06-25T08:52:31.925Z",
               "EditorCaption": ""
             }
           ]
