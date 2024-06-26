@@ -35,7 +35,7 @@ namespace API.Controllers
         }
 
         [HttpGet("getAllProjectsByUserId")]
-        public async Task<IActionResult> GetAllProjects(int userId)
+        public async Task<IActionResult> GetAllProjectsByUserId(int userId)
         {
             try
             {
@@ -54,7 +54,8 @@ namespace API.Controllers
         {
             try
             {
-                var projects = await _projectService.GetAllProjectsAsync();
+
+                var projects = await _projectService.GetAllProjectsAsync(orderBy);
                 return Ok(projects);
             }
             catch (Exception ex)
@@ -64,6 +65,7 @@ namespace API.Controllers
         }
 
         [HttpPost("addProject")]
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> AddProject(ProjectDto projectDto)
         {
             try
@@ -80,6 +82,7 @@ namespace API.Controllers
         }
 
         [HttpPut("updateProject")]
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> UpdateProject(int ProjectId, ProjectDto projectDto)
         {
             try
@@ -97,6 +100,7 @@ namespace API.Controllers
         }
 
         [HttpDelete("deleteProject")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteProject(int id)
         {
             try

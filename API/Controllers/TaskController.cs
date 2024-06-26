@@ -65,10 +65,12 @@ namespace API.Controllers
         }
 
         [HttpPut("updateTask")]
-        public async Task<IActionResult> UpdateTask(TaskDto taskDto)
+        [Authorize(Roles = "Admin,Moderator")]
+        public async Task<IActionResult> UpdateTask(TaskDto taskDto, int taskId)
         {
             try
             {
+                taskDto.Id = taskId;
                 await _taskService.UpdateTaskAsync(TaskMapper.ToEntity(taskDto));
 
                 return Ok(new { message = "Task updated successfully" });
@@ -80,6 +82,7 @@ namespace API.Controllers
         }
 
         [HttpDelete("deleteTask")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteTask(int id)
         {
             try

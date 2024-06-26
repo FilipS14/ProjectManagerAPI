@@ -6,7 +6,7 @@ using DataBase.Context;
 using Microsoft.Extensions.Configuration;
 using Project.Database.Repositories;
 using Core.Validation;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Core.Services
 {
@@ -40,9 +40,22 @@ namespace Core.Services
             return await _projectRepository.GetProjectsByUserIdAsync(userId);
         }
 
-        public async Task<IEnumerable<ProjectEntity>> GetAllProjectsAsync()
+        public async Task<IEnumerable<ProjectEntity>> GetAllProjectsAsync(int orderBy)
         {
-            return await _projectRepository.GetAllAsync();
+            if (orderBy < 0 || orderBy > 2)
+                throw new Exception("The order criteria given is not right. Criterias: 0 - do not order, 1 - order by created date, 2 - order by project name.");
+
+            var projects = await _projectRepository.GetAllAsync();
+
+            switch (orderBy)
+            {
+                case 1: // Order by Created Date, ascending
+                    return projects.OrderBy(p => p.CreatedDate);
+                case 2: // Order by Name, alphabetically
+                    return projects.OrderBy(p => p.Name);
+                default:
+                    return projects;
+            }
         }
 
         public async Task AddProjectAsync(ProjectEntity project)
@@ -69,7 +82,7 @@ namespace Core.Services
                 if (!ProjectValidation.IsProjectDataValid(project, _context))
                     throw new Exception("The data provided for the new project is not valid. Check internal console for more details about the error.");
 
-                _context.Entry(oldProject).State = (Microsoft.EntityFrameworkCore.EntityState)EntityState.Detached;
+                _context.Entry(oldProject).State = EntityState.Detached;
                 await _projectRepository.UpdateProjectAsync(project);
             }
             catch (Exception e)

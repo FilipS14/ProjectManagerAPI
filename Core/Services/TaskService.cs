@@ -3,7 +3,8 @@ using DataBase.Entities;
 using Core.Validation;
 using DataBase.Context;
 using Microsoft.Extensions.Configuration;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
+using Core.Valdation;
 
 namespace Core.Services
 {
@@ -39,17 +40,24 @@ namespace Core.Services
 
         public async Task UpdateTaskAsync(TaskEntity task)
         {
-            if (!TaskValidation.TaskExists(task.Id, _context))
-                throw new Exception("There is no project with this task Id.");
+            try
+            {
+                if (!TaskValidation.TaskExists(task.Id, _context))
+                    throw new Exception("There is no project with this task Id.");
 
-            var oldTask = await GetTaskByIdAsync(task.Id);
-            task.DueDate = oldTask.DueDate;
+                var oldTask = await GetTaskByIdAsync(task.Id);
+                task.DueDate = oldTask.DueDate;
 
-            if (!TaskValidation.IsTaskValid(task, _context))
-                throw new Exception("The data provided for the edited task is not valid. Check internal console for more details about the error.");
+                if (!TaskValidation.IsTaskValid(task, _context))
+                    throw new Exception("The data provided for the edited task is not valid. Check internal console for more details about the error.");
 
-            _context.Entry(oldTask).State = (Microsoft.EntityFrameworkCore.EntityState)EntityState.Detached;
-            await _taskRepository.UpdateTaskAsync(task);
+                _context.Entry(oldTask).State = EntityState.Detached;
+                await _taskRepository.UpdateTaskAsync(task);
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"Couldn't update the task provided: {e}");
+            }
         }
 
         public async Task DeleteTaskAsync(int taskId)

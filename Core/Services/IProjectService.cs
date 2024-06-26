@@ -11,7 +11,7 @@ namespace Core.Services
     {
         Task<ProjectEntity> GetProjectByIdAsync(int id);
         Task<IEnumerable<ProjectEntity>> GetProjectsByUserIdAsync(int userId);
-        Task<IEnumerable<ProjectEntity>> GetAllProjectsAsync();
+        Task<IEnumerable<ProjectEntity>> GetAllProjectsAsync(int orderBy);
         Task AddProjectAsync(ProjectEntity project);
         Task UpdateProjectAsync(ProjectEntity project);
         Task DeleteProjectAsync(int id);

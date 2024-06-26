@@ -9,7 +9,7 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    // [Authorize]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -48,7 +48,7 @@ namespace API.Controllers
         }
 
         [HttpGet("getUserbyId")]
-        // [Authorize(Roles = "Admin,Moderator")]
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> GetById(int id)
         {
             try
@@ -64,7 +64,7 @@ namespace API.Controllers
         }
 
         [HttpGet("getAllUsers")]
-        // [Authorize(Roles = "Admin,Moderator")]
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> GetAll()
         { 
             
@@ -73,7 +73,7 @@ namespace API.Controllers
         }
 
         [HttpPut("updateUser")]
-        // [Authorize(Roles = "Admin,Moderator")]
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Update(UserDto userDto, int? userId = null)
         {
             try
@@ -91,7 +91,7 @@ namespace API.Controllers
         }
 
         [HttpDelete("deleteUser")]
-        // [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             try
