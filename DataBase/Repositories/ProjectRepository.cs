@@ -26,7 +26,12 @@ namespace DataBase.Repositories
 
         public async Task<IEnumerable<ProjectEntity>> GetProjectsByUserIdAsync(int userId)
         {
-            return await _context.Projects.Where(p => p.UserId == userId).ToListAsync();
+            return await _context.Projects.Where(p => p.AsigneeID == userId).ToListAsync();
+        }
+
+        public async Task<IEnumerable<ProjectEntity>> GetAllAsync()
+        {
+            return await _context.Projects.ToListAsync();
         }
 
         public async Task AddProjectAsync(ProjectEntity project)

@@ -1,45 +1,63 @@
 ﻿using DataBase.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using DataBase.Entities;
-using System.Text;
-using System.Threading.Tasks;
+using Core.Validation;
+using DataBase.Context;
+using Microsoft.Extensions.Configuration;
+using System.Data.Entity;
 
 namespace Core.Services
 {
-    public class TaskService
+    public class TaskService : ITaskService
     {
         private readonly ITaskRepository _taskRepository;
+        private readonly IConfiguration _configuration;
+        private readonly ProjectDbContext _context;
 
-        public TaskService(ITaskRepository taskRepository)
+        public TaskService(ITaskRepository taskRepository, IConfiguration configuration, ProjectDbContext context)
         {
             _taskRepository = taskRepository;
+            _configuration = configuration;
+            _context = context;
         }
 
-        public Task<TaskEntity> GetTaskByIdAsync(int id)
+        public async Task<TaskEntity> GetTaskByIdAsync(int id)
         {
-            return _taskRepository.GetTaskByIdAsync(id);
+            return await _taskRepository.GetTaskByIdAsync(id);
         }
 
-        public Task<IEnumerable<TaskEntity>> GetTasksByProjectIdAsync(int projectId)
+        public async Task<IEnumerable<TaskEntity>> GetTasksByProjectIdAsync(int projectId)
         {
-            return _taskRepository.GetTasksByProjectIdAsync(projectId);
+            return await _taskRepository.GetTasksByProjectIdAsync(projectId);
         }
 
-        public Task AddTaskAsync(TaskEntity task)
+        public async Task AddTaskAsync(TaskEntity task)
         {
-            return _taskRepository.AddTaskAsync(task);
+            if (!TaskValidation.IsTaskValid(task, _context))
+                throw new Exception("The data provided for the new task is not valid. Check internal console for more details about the error.");
+            await _taskRepository.AddTaskAsync(task);
         }
 
-        public Task UpdateTaskAsync(TaskEntity task)
+        public async Task UpdateTaskAsync(TaskEntity task)
         {
-            return _taskRepository.UpdateTaskAsync(task);
+            if (!TaskValidation.TaskExists(task.Id, _context))
+                throw new Exception("There is no project with this task Id.");
+
+            var oldTask = await GetTaskByIdAsync(task.Id);
+            task.DueDate = oldTask.DueDate;
+
+            if (!TaskValidation.IsTaskValid(task, _context))
+                throw new Exception("The data provided for the edited task is not valid. Check internal console for more details about the error.");
+
+            _context.Entry(oldTask).State = (Microsoft.EntityFrameworkCore.EntityState)EntityState.Detached;
+            await _taskRepository.UpdateTaskAsync(task);
         }
 
-        public Task DeleteTaskAsync(int id)
+        public async Task DeleteTaskAsync(int taskId)
         {
-            return _taskRepository.DeleteTaskAsync(id);
+            if (!TaskValidation.TaskExists(taskId, _context))
+                throw new Exception("There is no project with this task Id.");
+                
+            await _taskRepository.DeleteTaskAsync(taskId);
         }
     }
 }

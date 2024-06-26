@@ -1,47 +1,90 @@
 ﻿using Database.Repositories;
 using System;
-using System.Collections.Generic;
 using DataBase.Entities;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Database.Repositories;
-
+using DataBase.Context;
+using Microsoft.Extensions.Configuration;
+using Project.Database.Repositories;
+using Core.Validation;
+using System.Data.Entity;
 
 namespace Core.Services
 {
-    public class ProjectService
+    public class ProjectService : IProjectService
     {
         private readonly IProjectRepository _projectRepository;
+        private readonly IConfiguration _configuration;
+        private readonly ProjectDbContext _context;
 
-        public ProjectService(IProjectRepository projectRepository)
+
+        public ProjectService(IConfiguration configuration, ProjectDbContext context, IProjectRepository projectRepository)
         {
             _projectRepository = projectRepository;
+            _context = context;
+            _configuration = configuration;
         }
 
-        public Task<ProjectEntity> GetProjectByIdAsync(int id)
+        public async Task<ProjectEntity> GetProjectByIdAsync(int id)
         {
-            return _projectRepository.GetProjectByIdAsync(id);
+            if (!ProjectValidation.ProjectWithThisIdExists(id, _context))
+                throw new Exception("There is no project with this project Id.");
+
+            return await _projectRepository.GetProjectByIdAsync(id);
         }
 
-        public Task<IEnumerable<ProjectEntity>> GetProjectsByUserIdAsync(int userId)
+        public async Task<IEnumerable<ProjectEntity>> GetProjectsByUserIdAsync(int userId)
         {
-            return _projectRepository.GetProjectsByUserIdAsync(userId);
+            if (!ProjectValidation.ProjectWithThisIdExists(userId, _context))
+                throw new Exception("There is no user with this user Id.");
+
+            return await _projectRepository.GetProjectsByUserIdAsync(userId);
         }
 
-        public Task AddProjectAsync(ProjectEntity project)
+        public async Task<IEnumerable<ProjectEntity>> GetAllProjectsAsync()
         {
-            return _projectRepository.AddProjectAsync(project);
+            return await _projectRepository.GetAllAsync();
         }
 
-        public Task UpdateProjectAsync(ProjectEntity project)
+        public async Task AddProjectAsync(ProjectEntity project)
         {
-            return _projectRepository.UpdateProjectAsync(project);
+            Console.WriteLine("DEBUG: Entered Project Service Add.\n");
+            if (!ProjectValidation.IsProjectDataValid(project, _context))
+                throw new Exception("The data provided for the new project is not valid. Check internal console for more details about the error.");
+
+            Console.WriteLine("DEBUG: Adding the project to context\n");
+            await _projectRepository.AddProjectAsync(project);
         }
 
-        public Task DeleteProjectAsync(int id)
+        public async Task UpdateProjectAsync(ProjectEntity project)
         {
-            return _projectRepository.DeleteProjectAsync(id);
+            try
+            {
+                Console.WriteLine("DEBUG: Entered Project Service Update.\n");
+                if (!ProjectValidation.ProjectWithThisIdExists(project.Id, _context))
+                    throw new Exception("There is no project with this project Id.");
+
+                var oldProject = await GetProjectByIdAsync(project.Id);
+                project.CreatedDate = oldProject.CreatedDate;
+
+                if (!ProjectValidation.IsProjectDataValid(project, _context))
+                    throw new Exception("The data provided for the new project is not valid. Check internal console for more details about the error.");
+
+                _context.Entry(oldProject).State = (Microsoft.EntityFrameworkCore.EntityState)EntityState.Detached;
+                await _projectRepository.UpdateProjectAsync(project);
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"Couldn't update the user provided: {e}");
+            }
+        }
+
+        public async Task DeleteProjectAsync(int id)
+        {
+            Console.WriteLine("DEBUG: Entered Project Service Delete.\n");
+            if (!ProjectValidation.ProjectWithThisIdExists(id, _context))
+                throw new Exception("There is no project with this project Id.");
+                
+            await _projectRepository.DeleteProjectAsync(id);
         }
     }
 }

@@ -17,6 +17,9 @@ using DataBase.Entities;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using Swashbuckle.AspNetCore.Annotations;
+using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authorization;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace API
 {
@@ -31,6 +34,7 @@ namespace API
 
             var key = Encoding.ASCII.GetBytes(configuration["JwtSettings:Key"]);
 
+            
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -46,22 +50,54 @@ namespace API
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
                     ValidateAudience = false,
+                    ValidIssuer = configuration["JwtSettings:Issuer"],
+                    ValidAudience = configuration["JwtSettings:Audience"],
                     RoleClaimType = ClaimTypes.Role
                 };
             });
-            
-            services.AddScoped<IUserService, UserService>();
+
+            services.AddAuthorization(
+                options => options.FallbackPolicy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme).Build()
+            );
 
             services.AddControllers();
             services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen();
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "Lab project API", Version = "v1" });
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = @"JWT Authorization header using the Bearer scheme. Example: 'Bearer <token_placeholder>'",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            },
+                            In = ParameterLocation.Header,
+                        }, new List<string>()
+                    }
+                });
+            });
         }
 
         public static void AddServices(this IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<ProjectService>();
-            services.AddScoped<TaskService>();
+            services.AddScoped<IProjectService, ProjectService>();
+            services.AddScoped<ITaskService, TaskService>();
         }
 
         public static void AddRepository(this IServiceCollection services)
@@ -86,9 +122,10 @@ namespace API
 
             app.UseRouting();
 
+            
             app.UseAuthentication();
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

@@ -13,9 +13,8 @@ namespace DataBase.Entities
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
 
-        public int UserId { get; set; }
-        public UserEntity User { get; set; }
-
-        public ICollection<TaskEntity> Tasks { get; set; }
+        public int AsigneeID { get; set; } // ID of an user responsible for the project / Project Manager
+        public UserEntity Asignee { get; set; }
+        public ICollection<TaskEntity>? Tasks { get; set; }
     }
 }

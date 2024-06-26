@@ -11,13 +11,13 @@ namespace DataBase.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Status { get; set; }
+        public bool Finished { get; set; } = false;
+        public DateTime DueDate { get; set; }
 
         public int ProjectId { get; set; }
         public ProjectEntity Project { get; set; }
 
-        public int? UserId { get; set; }
-        public UserEntity User { get; set; }
-
+        public int? AsigneeID { get; set; } // ID of the user responsible for the task
+        public UserEntity Asignee { get; set; }
     }
 }

@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6EEACDB9-A556-45C2-9C20-E1BEA6C0538C}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EEACDB9-A556-45C2-9C20-E1BEA6C0538C}|Core\\Core.csproj|solutionrelative:core\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\mappers\\taskmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\mappers\\taskmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7D1ED8F-A9AC-40B3-A477-1D9BBD42D50C}|API\\API.csproj|solutionrelative:api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\validation\\taskvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\validation\\taskvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\database\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B130B745-ED51-4D16-8988-4F43869FDC33}|DataBase\\DataBase.csproj|solutionrelative:database\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\validation\\projectvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\validation\\projectvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,20 +26,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\UserController.cs",
-              "ToolTip": "API/Controllers/UserController.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAWwF4AAAAgAAAA",
+              "DocumentIndex": 0,
+              "Title": "TaskMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Mappers\\TaskMapper.cs",
+              "RelativeDocumentMoniker": "Core\\Mappers\\TaskMapper.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Mappers\\TaskMapper.cs",
+              "RelativeToolTip": "Core\\Mappers\\TaskMapper.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAlwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "API\\Controllers",
-              "OverriddenToolTip": "API/Controllers/UserController.cs",
-              "WhenOpened": "2024-06-25T10:54:37.724Z",
+              "OverriddenGroupName": "Core\\Mappers",
+              "WhenOpened": "2024-06-26T18:14:50.968Z",
               "EditorCaption": ""
             },
             {
@@ -44,30 +48,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\DataBase\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "DataBase\\Repositories\\UserRepository.cs",
-              "ToolTip": "DataBase/Repositories/UserRepository.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAmwDYAAAAyAAAA",
+              "DocumentIndex": 1,
+              "Title": "TaskValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Validation\\TaskValidation.cs",
+              "RelativeDocumentMoniker": "Core\\Validation\\TaskValidation.cs",
+              "ToolTip": "Core/Validation/TaskValidation.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBMAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "DataBase\\Repositories",
-              "OverriddenToolTip": "DataBase/Repositories/UserRepository.cs",
-              "WhenOpened": "2024-06-25T10:30:45.738Z",
+              "OverriddenGroupName": "Core\\Validation",
+              "OverriddenToolTip": "Core/Validation/TaskValidation.cs",
+              "WhenOpened": "2024-06-26T18:08:33.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Core\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\UserService.cs",
-              "RelativeToolTip": "Core\\Services\\UserService.cs",
-              "ViewState": "AQIAAJ0AAAAAAAAAAAAEwGQAAAA1AAAA",
+              "DocumentIndex": 3,
+              "Title": "ProjectValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Validation\\ProjectValidation.cs",
+              "RelativeDocumentMoniker": "Core\\Validation\\ProjectValidation.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Validation\\ProjectValidation.cs",
+              "RelativeToolTip": "Core\\Validation\\ProjectValidation.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T17:47:33.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\ProjectService.cs",
+              "RelativeDocumentMoniker": "Core\\Services\\ProjectService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\ProjectService.cs",
+              "RelativeToolTip": "Core\\Services\\ProjectService.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAmwD8AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "OverriddenGroupName": "Core\\Services",
-              "WhenOpened": "2024-06-25T08:52:31.925Z",
+              "WhenOpened": "2024-06-26T17:42:12.163Z",
               "EditorCaption": ""
             }
           ]

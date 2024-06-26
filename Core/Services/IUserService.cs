@@ -17,6 +17,5 @@ namespace Core.Services
         Task DeleteUserAsync(int id);
         Task Register(UserDto userDto);
         Task<string> Authenticate(LoginDto loginDto);
-
     }
 }

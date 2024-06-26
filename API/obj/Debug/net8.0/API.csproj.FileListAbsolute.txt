@@ -142,7 +142,6 @@ C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\net8.0\API.AssemblyInfo.cs
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
-C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\net8.0\API.sourcelink.json
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\net8.0\staticwebassets.build.json
@@ -160,3 +159,4 @@ C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\net8.0\ref\API.dll
 C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Filip\Desktop\facultate\anul2\sem2\NET\ProjectManagerAPI\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs

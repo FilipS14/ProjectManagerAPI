@@ -9,24 +9,16 @@ namespace Utils.Enums
 {
     public class UserRole 
     {
-        /// <summary>
-        /// User roles enumeration
-        /// </summary>
+        // User roles enumeration
         public enum UserRoleEnum
         {
-            /// <summary>
-            /// Administrator - access to all CRUD operations
-            /// </summary>
+            // Administrator - access to all CRUD operations
             Admin,
 
-            /// <summary>
-            /// Moderator - access to create, read and update
-            /// </summary>
+            // Moderator - access to create, read and update
             Moderator,
 
-            /// <summary>
-            /// Regular User - access to create and read
-            /// </summary>
+            // Regular User - access to create and read
             User
         }
         
