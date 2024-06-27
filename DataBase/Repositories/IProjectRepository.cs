@@ -1,6 +1,6 @@
 ﻿using DataBase.Entities;
 
-namespace Database.Repositories
+namespace DataBase.Repositories
 {
     public interface IProjectRepository
     {

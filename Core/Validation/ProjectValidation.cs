@@ -1,35 +1,28 @@
 ﻿using DataBase.Context;
 using DataBase.Entities;
-using Project.Database.Repositories;
-using Database.Repositories;
+using DataBase.Repositories;
+using Utils.Middleware.Exceptions;
 
 namespace Core.Validation
 {
     public class ProjectValidation
     {
-        public static bool IsProjectDataValid(ProjectEntity project, ProjectDbContext _context)
+        public static void ValidateProject(ProjectEntity project, ProjectDbContext _context)
         {
-            Console.WriteLine("DEBUG: Entering the verification\n");
             if (!IsProjectNameValid(project.Name))
             {
-                Console.WriteLine("ERROR: Project name is invalid.\n");
-                return false;
+                throw new ValidationException("Project name is invalid.", new List<string> { "The project name cannot be null and must start with a letter." });
             }
             
             if (!IsProjectDescriptionValid(project.Description))
             {
-                Console.WriteLine("ERROR: Project description is invalid because it is null.\n");
-                return false;
+                throw new ValidationException("Project description is invalid because it is null.", new List<string> { "" });
             }
 
             if (!UserWithIdExists(project.AsigneeID, _context))
             {
-                Console.WriteLine("ERROR: There is no user with the id provided.\n");
-                return false;
+                throw new NotFoundException("There is no user with the id provided.");
             }
-
-            Console.WriteLine("DEBUG: Verification passed.\n");
-            return true;
         }
 
         public static bool ProjectWithThisIdExists(int projectId, ProjectDbContext _context)
@@ -49,24 +42,22 @@ namespace Core.Validation
         {
             if (string.IsNullOrEmpty(projectName))
             {
-                Console.WriteLine("ERROR: Project name is null.\n");
-                return false;
+                throw new ValidationException("Project name is null.", new List<string> { "Project name cannot be empty." });
             }
 
             if (!char.IsLetter(projectName[0]))
             {
-                Console.WriteLine("ERROR: Project name must start with a letter.\n");
-                return false;
+                throw new ValidationException("Project name must begin with a letter.", new List<string> { "Project name does not begin with a letter." });
             }
 
             return true;
         }
         
-        private static  bool IsProjectDescriptionValid(string projectDescription)
+        private static bool IsProjectDescriptionValid(string projectDescription)
         {
             if (string.IsNullOrEmpty(projectDescription))
             {
-                return false;
+                throw new ValidationException("Project description cannot be null.", new List<string> { "Project description cannot be empty." });
             }
             return true;
         }

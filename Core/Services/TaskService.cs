@@ -4,7 +4,7 @@ using Core.Validation;
 using DataBase.Context;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
-using Core.Valdation;
+using Utils.Middleware.Exceptions;
 
 namespace Core.Services
 {
@@ -33,8 +33,7 @@ namespace Core.Services
 
         public async Task AddTaskAsync(TaskEntity task)
         {
-            if (!TaskValidation.IsTaskValid(task, _context))
-                throw new Exception("The data provided for the new task is not valid. Check internal console for more details about the error.");
+            TaskValidation.ValidateTask(task, _context);
             await _taskRepository.AddTaskAsync(task);
         }
 
@@ -43,13 +42,12 @@ namespace Core.Services
             try
             {
                 if (!TaskValidation.TaskExists(task.Id, _context))
-                    throw new Exception("There is no project with this task Id.");
+                    throw new ValidationException("There is no project with this task Id.", new List<string> {"Invalid project id."});
 
                 var oldTask = await GetTaskByIdAsync(task.Id);
                 task.DueDate = oldTask.DueDate;
 
-                if (!TaskValidation.IsTaskValid(task, _context))
-                    throw new Exception("The data provided for the edited task is not valid. Check internal console for more details about the error.");
+                TaskValidation.ValidateTask(task, _context);
 
                 _context.Entry(oldTask).State = EntityState.Detached;
                 await _taskRepository.UpdateTaskAsync(task);
@@ -63,7 +61,7 @@ namespace Core.Services
         public async Task DeleteTaskAsync(int taskId)
         {
             if (!TaskValidation.TaskExists(taskId, _context))
-                throw new Exception("There is no project with this task Id.");
+                throw new ValidationException("There is no project with this task Id.", new List<string> {"Invalid project id."});
                 
             await _taskRepository.DeleteTaskAsync(taskId);
         }

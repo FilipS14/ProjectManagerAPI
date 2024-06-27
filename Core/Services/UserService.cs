@@ -8,8 +8,9 @@ using DataBase.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using Project.Database.Repositories;
+using DataBase.Repositories;
 using Utils.Enums;
+using Core.Validation;
 
 namespace Core.Services
 {
@@ -46,33 +47,11 @@ namespace Core.Services
             return _userRepository.AddUserAsync(user);
         }
 
-        private async Task<bool> IsUserValidForUpdate(UserEntity user)
-        {
-            var existingUser = await GetUserByIdAsync((int)user.Id);
-            if (existingUser == null)
-                throw new Exception("No user with this ID exists.");
-
-            if (IsUserInformationValid(user))
-                return false;
-
-            var userIds = GetUserIdByUsernameOrEmail(user);
-            if (userIds != null)
-            {
-                foreach (var id in userIds)
-                {
-                    if (id != user.Id)
-                        throw new Exception("Another user with the same username or email already exists.");
-                }
-            }
-
-            return true;
-        }
-
         public async Task UpdateUserAsync(UserEntity user)
         {
             try
             {
-                if (await IsUserValidForUpdate(user) == null)
+                if (await UserValidation.IsUserValidForUpdate(user, _userRepository, _context) == null)
                     throw new Exception($"User could not be updated. Check internal console for more information about the error.");
 
                 var existingUser = await _context.Users.FindAsync(user.Id);
@@ -99,71 +78,6 @@ namespace Core.Services
             await _userRepository.DeleteUserAsync(id);
         }
 
-        private bool FirstCharacterIsLetter(UserEntity user)
-        {
-            return char.IsLetter(user.Username[0]);
-        }
-
-        private List<int>? GetUserIdByUsernameOrEmail(UserEntity user)
-        {
-            var matchingUserIds = _context.Users
-                                        .Where(u => u.Username.Equals(user.Username) || u.Email.Equals(user.Email))
-                                        .Select(u => (int)u.Id)
-                                        .ToList();
-                                        
-            return matchingUserIds.Count == 0 ? null : matchingUserIds;
-        }
-        private bool IsEmailValid(string email)
-        {
-            var emailRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
-            return Regex.IsMatch(email, emailRegex);
-        }
-
-        private bool IsPassWordValid(string password)
-        {
-            return password.Length >= 8;
-        }
-
-        private bool IsUserInformationValid(UserEntity user)
-        {
-            if (FirstCharacterIsLetter(user) == false)
-            {
-                Console.WriteLine("! User invalid. Specified username is not valid.\n");
-                return false;
-            }
-
-            if (IsEmailValid(user.Email) == false)
-            {
-                Console.WriteLine("! User invalid. Specified email is not valid.\n");
-                return false;
-            }
-
-            if (!IsPassWordValid(user.Password))
-            {
-                Console.WriteLine("! Password invaild. The password must have minimum 8 characters.\n");
-                return false;
-            }
-
-            if (user.FullName == "")
-            {
-                Console.WriteLine("! Full name invalid. Please enter your full name.\n");
-                return false;
-            }
-            return true;
-        }
-
-        private bool IsUserValidForRegister(UserEntity user)
-        {
-            Console.WriteLine($"Checking if the user exists");
-            if (GetUserIdByUsernameOrEmail(user) != null)
-            {
-                Console.WriteLine("! User invalid. This username / email is already taken.\n");
-                return false;
-            }
-
-            return IsUserInformationValid(user);
-        }
-
         public async Task Register(UserDto userDto)
         {
             try
@@ -177,10 +91,11 @@ namespace Core.Services
                     Password = BCrypt.Net.BCrypt.HashPassword(userDto.Password),
                     Role = UserRole.GetUserRoleFromString(userDto.Role)
                 };
-                if (IsUserValidForRegister(user))
+                if (UserValidation.IsUserValidForRegister(user, _context))
                 {
                     _context.Users.Add(user);
                     await _context.SaveChangesAsync();
+                    
                 }
                 else
                     throw new Exception($"User could not be registered. Check internal console for more information about the error.");
@@ -189,7 +104,6 @@ namespace Core.Services
             {
                 throw new Exception($"An error occured while saving entity changes: {e.Message}", e);
             }
-
         }
 
         public async Task<string> Authenticate(LoginDto loginDto)

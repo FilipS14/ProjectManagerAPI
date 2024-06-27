@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using DataBase.Context;
-using Project.Database.Repositories;
+using DataBase.Repositories;
 using DataBase.Repositories;
 using Core.Services;
-using Database.Repositories;
+using DataBase.Repositories;
 using API;
 using Microsoft.Extensions.Hosting;
 

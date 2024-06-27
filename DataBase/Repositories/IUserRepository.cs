@@ -1,7 +1,7 @@
 ﻿using DataBase.Entities;
 using DataBase.Repositories;
 
-namespace Project.Database.Repositories
+namespace DataBase.Repositories
 {
     public interface IUserRepository
     {

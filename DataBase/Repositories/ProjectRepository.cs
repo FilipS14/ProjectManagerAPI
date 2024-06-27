@@ -1,12 +1,6 @@
 ﻿using DataBase.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DataBase.Entities;
 using Microsoft.EntityFrameworkCore;
-using Database.Repositories;
 
 namespace DataBase.Repositories
 {

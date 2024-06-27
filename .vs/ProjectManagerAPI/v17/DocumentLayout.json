@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\mappers\\taskmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\mappers\\taskmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\validation\\taskvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\validation\\taskvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\validation\\projectvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\validation\\projectvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\validation\\taskvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\validation\\taskvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72A95089-4ACA-4BF8-B679-688FF99EF2F1}|API\\API.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72A95089-4ACA-4BF8-B679-688FF99EF2F1}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B849B3D3-DBF3-4A72-B741-F6CC1E457898}|Utils\\Utils.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\utils\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B849B3D3-DBF3-4A72-B741-F6CC1E457898}|Utils\\Utils.csproj|solutionrelative:utils\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|c:\\users\\filip\\desktop\\facultate\\anul2\\sem2\\net\\projectmanagerapi\\core\\validation\\uservalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D513B9B-5014-4409-A0BF-CB929C110CED}|Core\\Core.csproj|solutionrelative:core\\validation\\uservalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,71 +46,99 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskService.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\TaskService.cs",
-              "RelativeDocumentMoniker": "Core\\Services\\TaskService.cs",
-              "ToolTip": "Core/Services/TaskService.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAawDgAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "Core\\Services",
-              "OverriddenToolTip": "Core/Services/TaskService.cs",
-              "WhenOpened": "2024-06-26T19:07:03.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TaskMapper.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Mappers\\TaskMapper.cs",
-              "RelativeDocumentMoniker": "Core\\Mappers\\TaskMapper.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Mappers\\TaskMapper.cs",
-              "RelativeToolTip": "Core\\Mappers\\TaskMapper.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAYwA0AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "Core\\Mappers",
-              "WhenOpened": "2024-06-26T18:14:50.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TaskValidation.cs",
-              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Validation\\TaskValidation.cs",
-              "RelativeDocumentMoniker": "Core\\Validation\\TaskValidation.cs",
-              "ToolTip": "Core/Validation/TaskValidation.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAkwBMAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenGroupName": "Core\\Validation",
-              "OverriddenToolTip": "Core/Validation/TaskValidation.cs",
-              "WhenOpened": "2024-06-26T18:08:33.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "ProjectValidation.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Validation\\ProjectValidation.cs",
               "RelativeDocumentMoniker": "Core\\Validation\\ProjectValidation.cs",
-              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Validation\\ProjectValidation.cs",
-              "RelativeToolTip": "Core\\Validation\\ProjectValidation.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "ToolTip": "Core/Validation/ProjectValidation.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwC4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T17:47:33.091Z",
+              "OverriddenGroupName": "Core\\Validation",
+              "OverriddenToolTip": "Core/Validation/ProjectValidation.cs",
+              "WhenOpened": "2024-06-27T09:09:04.437Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ProjectService.cs",
               "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\ProjectService.cs",
               "RelativeDocumentMoniker": "Core\\Services\\ProjectService.cs",
               "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\ProjectService.cs",
               "RelativeToolTip": "Core\\Services\\ProjectService.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAuwB0AAABRAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAuwFkAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "OverriddenGroupName": "Core\\Services",
-              "WhenOpened": "2024-06-26T17:42:12.163Z",
+              "WhenOpened": "2024-06-27T09:05:39.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\TaskService.cs",
+              "RelativeDocumentMoniker": "Core\\Services\\TaskService.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Services\\TaskService.cs",
+              "RelativeToolTip": "Core\\Services\\TaskService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAArwCMAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Core\\Services",
+              "WhenOpened": "2024-06-27T08:59:30.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:52:23.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Validation\\TaskValidation.cs",
+              "RelativeDocumentMoniker": "Core\\Validation\\TaskValidation.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Validation\\TaskValidation.cs",
+              "RelativeToolTip": "Core\\Validation\\TaskValidation.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAawCIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Core\\Validation",
+              "WhenOpened": "2024-06-27T08:43:01.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Validation\\UserValidation.cs",
+              "RelativeDocumentMoniker": "Core\\Validation\\UserValidation.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Core\\Validation\\UserValidation.cs",
+              "RelativeToolTip": "Core\\Validation\\UserValidation.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Core\\Validation",
+              "WhenOpened": "2024-06-27T08:36:40.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Utils\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Utils\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Filip\\Desktop\\facultate\\anul2\\sem2\\NET\\ProjectManagerAPI\\Utils\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "Utils\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAQwE8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Utils\\Middleware",
+              "WhenOpened": "2024-06-27T08:36:55.745Z",
               "EditorCaption": ""
             }
           ]

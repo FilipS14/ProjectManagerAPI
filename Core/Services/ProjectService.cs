@@ -1,12 +1,10 @@
-﻿using Database.Repositories;
-using System;
+﻿using DataBase.Repositories;
 using DataBase.Entities;
-using Database.Repositories;
 using DataBase.Context;
 using Microsoft.Extensions.Configuration;
-using Project.Database.Repositories;
 using Core.Validation;
 using Microsoft.EntityFrameworkCore;
+using Utils.Middleware.Exceptions;
 
 namespace Core.Services
 {
@@ -27,7 +25,8 @@ namespace Core.Services
         public async Task<ProjectEntity> GetProjectByIdAsync(int id)
         {
             if (!ProjectValidation.ProjectWithThisIdExists(id, _context))
-                throw new Exception("There is no project with this project Id.");
+                throw new ValidationException("There is no project with this project Id.", 
+                                            new List<string> { "Invalid project id." });
 
             return await _projectRepository.GetProjectByIdAsync(id);
         }
@@ -35,7 +34,8 @@ namespace Core.Services
         public async Task<IEnumerable<ProjectEntity>> GetProjectsByUserIdAsync(int userId)
         {
             if (!ProjectValidation.ProjectWithThisIdExists(userId, _context))
-                throw new Exception("There is no user with this user Id.");
+                throw new ValidationException("There is no user with this user Id.", 
+                                            new List<string> { "Invalid user id." });
 
             return await _projectRepository.GetProjectsByUserIdAsync(userId);
         }
@@ -43,7 +43,8 @@ namespace Core.Services
         public async Task<IEnumerable<ProjectEntity>> GetAllProjectsAsync(int orderBy)
         {
             if (orderBy < 0 || orderBy > 2)
-                throw new Exception("The order criteria given is not right. Criterias: 0 - do not order, 1 - order by created date, 2 - order by project name.");
+                throw new ValidationException("The order criteria given is not right. Criterias: 0 - do not order, 1 - order by created date, 2 - order by project name.",
+                                            new List<string> { "Invalid criteria id." });
 
             var projects = await _projectRepository.GetAllAsync();
 
@@ -60,11 +61,8 @@ namespace Core.Services
 
         public async Task AddProjectAsync(ProjectEntity project)
         {
-            Console.WriteLine("DEBUG: Entered Project Service Add.\n");
-            if (!ProjectValidation.IsProjectDataValid(project, _context))
-                throw new Exception("The data provided for the new project is not valid. Check internal console for more details about the error.");
+            ProjectValidation.ValidateProject(project, _context);
 
-            Console.WriteLine("DEBUG: Adding the project to context\n");
             await _projectRepository.AddProjectAsync(project);
         }
 
@@ -72,16 +70,14 @@ namespace Core.Services
         {
             try
             {
-                Console.WriteLine("DEBUG: Entered Project Service Update.\n");
                 if (!ProjectValidation.ProjectWithThisIdExists(project.Id, _context))
-                    throw new Exception("There is no project with this project Id.");
+                    throw new ValidationException("There is no project with this project Id.", new List<string>{ "Invalid project id." });
 
                 var oldProject = await GetProjectByIdAsync(project.Id);
                 project.CreatedDate = oldProject.CreatedDate;
 
-                if (!ProjectValidation.IsProjectDataValid(project, _context))
-                    throw new Exception("The data provided for the new project is not valid. Check internal console for more details about the error.");
-
+                ProjectValidation.ValidateProject(project, _context);
+                
                 _context.Entry(oldProject).State = EntityState.Detached;
                 await _projectRepository.UpdateProjectAsync(project);
             }

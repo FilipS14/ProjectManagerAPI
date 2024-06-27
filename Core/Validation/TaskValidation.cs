@@ -1,43 +1,38 @@
 ﻿using DataBase.Context;
 using DataBase.Entities;
 using System;
+using Utils.Middleware.Exceptions;
 
-namespace Core.Valdation
+namespace Core.Validation
 {
     public class TaskValidation
     {
-        public static bool IsTaskValid(TaskEntity task, ProjectDbContext _context)
+        public static void ValidateTask(TaskEntity task, ProjectDbContext _context)
         {
             if (!IsTaskNameValid(task.Name))
             {
-                Console.WriteLine("ERROR: Task name is not valid\n");
-                return false;
+                throw new ValidationException("Task name is not valid", new List<string> { "The task name cannot be null or longer than 100 characters and must start with a letter." });
             }
             
             if (!IsTaskDescriptionValid(task.Description))
             {
-                Console.WriteLine("ERROR: Task description is not valid.\n");
-                return false;
+                throw new ValidationException("Task description is not valid", new List<string> { "The task description cannot be null or longer than 100 characters." });
             }
 
             if (!IsTaskDueDateValid(task.DueDate))
             {
-                Console.WriteLine("ERROR: Task due date is not valid.\n");
-                return false;
+                throw new ValidationException("Task due date is not valid", new List<string> { "The due date must be in the future." });
             }
 
             if (!AsigneeWithIdExists((int)task.AsigneeID, _context))
             {
-                Console.WriteLine("ERROR: There is no user with the asignee id provided.\n");
-                return false;
+                throw new NotFoundException("There is no user with the asignee id provided.");
             }
 
             if (!ProjectWithIdExists(task.ProjectId, _context))
             {
-                Console.WriteLine("ERROR: There is no project with the project id provided.\n");
-                return false;
+                throw new NotFoundException("There is no project with the project id provided.");
             }
-            return true;
         }
 
         public static bool TaskExists(int taskId, ProjectDbContext _context)
@@ -48,23 +43,20 @@ namespace Core.Valdation
 
         private static bool IsTaskNameValid(string taskName)
         {
-            const int minNameLength = 100;
+            const int maxNameLength = 100;
             if (string.IsNullOrEmpty(taskName))
             {
-                Console.WriteLine("ERROR: The task name cannot be null.\n");
-                return false;
+                throw new ValidationException("The task name cannot be null or empty.", new List<string> { "Task name is empty" });
             }
 
             if (!char.IsLetter(taskName[0]))
             {
-                Console.WriteLine("ERROR: Task name must start with a letter.\n");
-                return false;
+                throw new ValidationException("Task name must start with a letter.", new List<string> { "Task name doesn't start with a letter" });
             }
 
-            if (taskName.Length > minNameLength)
+            if (taskName.Length > maxNameLength)
             {
-                Console.WriteLine("ERROR: The task name must be of maximum 100 characters.\n");
-                return false;
+                throw new ValidationException("The task name must be of maximum 100 characters.", new List<string> { "Task name must be of maximum 100 characters" });
             }
             
             return true;
@@ -75,14 +67,12 @@ namespace Core.Valdation
             const int maxDescriptionLength = 100;
             if (string.IsNullOrEmpty(taskDescription))
             {
-                Console.WriteLine("ERROR: There is no description provided for the task.\n");
-                return false;
+                throw new ValidationException("There is no description provided for the task.", new List<string> { "There is no description provided for the task" });
             }
             
             if (taskDescription.Length > maxDescriptionLength)
             {
-                Console.WriteLine("ERROR: The description provided must be of maximum 100 characters.\n");
-                return false;
+                throw new ValidationException("The description provided must be of maximum 100 characters.", new List<string> { "The description provided must be of maximum 100 characters." });
             }
             return true;
         }
@@ -91,21 +81,27 @@ namespace Core.Valdation
         {
             if (dueDate < DateTime.Now)
             {
-                Console.WriteLine($"DueDate: {dueDate}, Now: {DateTime.Now}");
-                Console.WriteLine("ERROR: The due date must be in the future.\n");
-                return false;
+                throw new ValidationException("The due date must be in the future.", new List<string> { "The due date must be in the future" });
             }
             return true;
         }
 
         private static bool AsigneeWithIdExists(int asigneeID, ProjectDbContext _context)
         {
-            return _context.Users.Any(u => u.Id.Equals(asigneeID));
+            if (!_context.Users.Any(u => u.Id.Equals(asigneeID)))
+            {
+                throw new NotFoundException("There is no user with the asignee id provided.");
+            }
+            return true;
         }
         
         private static bool ProjectWithIdExists(int projectId, ProjectDbContext _context)
         {
-            return _context.Projects.Any(p => p.Id.Equals(projectId));
+            if (!_context.Projects.Any(p => p.Id.Equals(projectId)))
+            {
+                throw new NotFoundException("There is no project with the project id provided.");
+            }
+            return true;
         }  
     }
 }

@@ -1,25 +1,16 @@
-﻿using DataBase.Context;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using DataBase.Repositories;
-using Microsoft.EntityFrameworkCore;
-using Project.Database.Repositories;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Core.Services;
-using Project.Database.Repositories;
-using Database.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Microsoft.Extensions.Configuration;
-using DataBase.Entities;
-using Microsoft.AspNetCore.Identity;
-using System.Security.Claims;
-using Swashbuckle.AspNetCore.Annotations;
 using Microsoft.OpenApi.Models;
+using Core.Services;
+using DataBase.Repositories;
+using DataBase.Context;
+using DataBase.Repositories;
+using Utils.Middleware;
 using Microsoft.AspNetCore.Authorization;
-using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Security.Claims;
+using DataBase.Repositories;
+using System.Text;
 
 namespace API
 {
@@ -122,10 +113,11 @@ namespace API
 
             app.UseRouting();
 
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
             
             app.UseAuthentication();
             app.UseAuthorization();
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
